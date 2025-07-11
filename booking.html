@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="booking.css" />
+
+    <title>Hidden Heaven Rathnapura</title>
+
+  </head>
+  <body>
+    <!-- ===== Start of Navbar Section ===== -->
+    <nav>
+      <div class="nav__bar">
+        <div class="nav__header">
+          <div class="logo nav__logo">
+            <div>H</div>
+            <span>HIDDEN<br />HEAVEN</span>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="room.html">Room</a></li>
+          <li><a href="feature.html">Feature</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="booking.html">Booking</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ===== End of Navbar Section ===== -->
+
+    <!-- ===== Start of Home Section ===== -->
+    <header class="header" id="home">
+      <div class="section__container header__container">
+        <p class="section__subheader">ABOUT US</p>
+        <h1>Hidden from the World,<br />Close to Nature </h1>
+        <a href="tours.html" class="btn">Take A Tour</a>
+      </div>
+    </header>
+    <!-- ===== End of Home Section ===== -->
+
+   <!-- ===== Start of booking Section ===== -->
+<section class="booking section__container">
+  <form class="booking__form" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="e728a6f4-e33f-41aa-96bf-18a892ad124d" />
+
+    <!-- Optional: Email subject -->
+    <input type="hidden" name="subject" value="New Booking Request from Website" />
+
+    <div class="input__group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    </div>
+    <div class="input__group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    </div>
+    <div class="input__group">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your number" required />
+    </div>
+    <div class="input__group">
+      <label for="guests">Guests</label>
+      <input type="number" id="guests" name="guests" placeholder="No. of guests" required />
+    </div>
+    <div class="input__group">
+      <label for="checkin">Check-in Date</label>
+      <input type="date" id="checkin" name="checkin" required />
+    </div>
+    <div class="input__group">
+      <label for="checkout">Check-out Date</label>
+      <input type="date" id="checkout" name="checkout" required />
+    </div>
+
+    <!-- Success Message -->
+    <div id="result"></div>
+
+    <div class="input__group full-width">
+      <button type="submit" class="btn">Book Now</button>
+    </div>
+  </form>
+</section>
+    <!-- ===== End of booking Section ===== -->
+
+    
+    <!-- ===== Start of Footer Section ===== -->
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="logo footer__logo">
+            <div>H</div>
+            <span>HIDDEN<br />HEAVEN</span>
+          </div>
+          <p class="section__description">
+            Hidden Heaven is your serene escape in Rathnapura — 
+            where comfort meets nature. Enjoy peaceful stays, warm 
+            hospitality, and unforgettable local experiences, all 
+            in one perfect destination.
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <div class="footer__links">
+            <li><a href="booking.html">Online Booking</a></li>
+            <li><a href="tours.html">Virtual Tours</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="booking.html">Customer Support</a></li>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <div class="footer__links">
+            <li>
+              <span><i class="ri-phone-fill"></i></span>
+              <div>
+                <h5>Phone Number</h5>
+                <p>+91 9876543210</p>
+              </div>
+            </li>
+            <li>
+              <span><i class="ri-record-mail-line"></i></span>
+              <div>
+                <h5>Email</h5>
+                <p>info@hotelmiranda.com</p>
+              </div>
+            </li>
+            <li>
+              <span><i class="ri-map-pin-2-fill"></i></span>
+              <div>
+                <h5>Location</h5>
+                <p>First St. NYC</p>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025 Hidden Heaven Rathnapura. All rights reserved.
+      </div>
+    </footer>
+    <!-- ===== End of Footer Section ===== -->
+
+    <!-- Scripts -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script type="module" src="main.js"></script>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+  const menuBtnIcon = menuBtn.querySelector("i");
+
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.contains("open");
+    menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+  });
+</script>
+
+<!-- Add this before </body> -->
+<script>
+  const form = document.querySelector("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          result.innerHTML = `<p style="color: green;">Thank you! Your booking request has been sent.</p>`;
+          form.reset();
+        } else {
+          result.innerHTML = `<p style="color: red;">Oops! Something went wrong.</p>`;
+        }
+      })
+      .catch(error => {
+        result.innerHTML = `<p style="color: red;">Error submitting form!</p>`;
+      });
+  });
+</script>
+
+</body>
+</html>
