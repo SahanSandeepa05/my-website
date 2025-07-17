@@ -465,6 +465,7 @@ nav {
     transform: none;
     background-color: transparent;
   }
+  
   .booking__container form {
     max-width: 100%;
     grid-template-columns: repeat(4, 1fr);

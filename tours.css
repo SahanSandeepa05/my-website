@@ -137,7 +137,6 @@ nav {
   font-size: 1.5rem;
   color: var(--text-dark);
   cursor: pointer;
-  display: none !important;
 }
 
 .nav__links {
@@ -473,6 +472,19 @@ nav {
 
 
 @media (width > 480px) {
+  .about__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__image:nth-child(1) {
+    grid-area: 1/2/2/3;
+  }
+
+  .about__image:nth-child(1),
+  .about__card:nth-child(4) {
+    transform: translateY(2rem);
+  }
+
   .tours__images {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -491,7 +503,7 @@ nav {
 }
 
 @media (width > 768px) {
-  nav {
+ nav {
     position: static;
     padding-inline: 1rem;
     background-color: var(--primary-color);
@@ -514,7 +526,7 @@ nav {
     background-color: transparent;
   }
 
-  .nav__tours__btn {
+  .nav__menu__btn {
     display: none;
   }
 
@@ -526,7 +538,7 @@ nav {
     transform: none;
     background-color: transparent;
   }
-
+  
   .tours__header {
     flex-direction: column;
     align-items: flex-start;
