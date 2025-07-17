@@ -7,11 +7,16 @@ menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
   const isOpen = navLinks.classList.contains("open");
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+
+   // Disable scroll when menu is open
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
 });
 
 navLinks.addEventListener("click", () => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line");
+
+   document.body.style.overflow = "auto";
 });
 
 // ===== ScrollReveal Animations =====
