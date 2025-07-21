@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="tours.css" />
+    <link rel="stylesheet" href="contactus.css" />
 
     <title>Hidden Heaven Rathnapura</title>
 
@@ -39,99 +39,48 @@
     <!-- ===== Start of Home Section ===== -->
     <header class="header" id="home">
       <div class="section__container header__container">
-        <p class="section__subheader">Near By Tours</p>
+        <p class="section__subheader">Contact Us</p>
         <h1>Hidden from the World,<br />Close to Nature </h1>
-        <a href="tours.html" class="btn">Take A Tour</a>
       </div>
     </header>
     <!-- ===== End of Home Section ===== -->
 
-     <!-- ===== Start of menu Section ===== -->
-    <section class="tours" id="tours">
-      <div class="section__container tours__container">
-        <div class="tours__header">
-          <div>
-            <p class="section__subheader">PLACES</p>
-            <h2 class="section__header">Explore Around Us Rathnapura</h2>
-          </div>
-          <div class="section__nav">
-            <span><i class="ri-arrow-left-line"></i></span>
-            <span><i class="ri-arrow-right-line"></i></span>
-          </div>
-        </div>
-        <ul class="tours__items">
-          <li>
-            <img src="assets/tour-1.jpg" alt="tours" />
-            <div class="tours__details">
-              <h4>Sri Pada (Adam's Peak)</h4>
-              <p>
-                Sri Pada, also known as Adam's Peak, is a sacred mountain in Sri Lanka. Pilgrims of all faiths climb it 
-                to honor the legendary footprint at the summit, symbolizing spiritual significance.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img src="assets/tour-2.jpg" alt="tours" />
-            <div class="tours__details">
-              <h4>Baker's Bend</h4>
-              <p>
-                Baker's Bend is a scenic hairpin turn on the Balangoda–Nuwara Eliya road. Surrounded by misty hills and lush forests, 
-                it offers breathtaking panoramic views, making it a favorite photo stop for travelers.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img src="assets/tour-3.jpg" alt="tours" />
-            <div class="tours__details">
-              <h4>Wangedigala</h4>
-              <p>
-                Wangedigala is a popular hiking destination in Sri Lanka, known for its rugged beauty and panoramic views. The trail 
-                offers stunning scenery, misty peaks, and a peaceful escape into unspoiled mountain wilderness.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img src="assets/tour-4.jpg" alt="tours" />
-            <div class="tours__details">
-              <h4>Surathali Ella</h4>
-              <p>
-                Surathali Ella is a beautiful waterfall located in Sri Lanka’s Ratnapura District. Surrounded by lush greenery, 
-                its graceful cascade and tranquil setting make it a favorite spot for nature lovers and photographers.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img src="assets/tour-5.jpg" alt="tours" />
-            <div class="tours__details">
-              <h4>Great World's End Drop</h4>
-              <p>
-                Great World's End Drop is a dramatic cliff in Horton Plains, Sri Lanka, plunging nearly 870 meters. 
-                It offers breathtaking views over misty valleys, tea plantations, and distant landscapes—an unforgettable 
-                experience for hikers.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img src="assets/tour-6.jpg" alt="tours" />
-            <div class="tours__details">
-              <h4>Devil's Staircase</h4>
-              <p>
-                Devil's Staircase is a thrilling, zigzag mountain trail in Sri Lanka, known for its sharp bends and steep climbs. 
-                Surrounded by misty hills and waterfalls, it's perfect for adventure seekers and nature lovers.
-              </p>
-            </div>
-          </li>
-        </ul>
-        <div class="tours__images">
-          <img src="assets/tour-7.jpg" alt="tours" />
-          <img src="assets/tour-8.jpg" alt="tours" />
-          <img src="assets/tour-9.jpg" alt="tours" />
-        </div>
-      </div>
-    </section>
-    <!-- ===== End of menu Section ===== -->
+    <!-- ===== Start of Contact Us Section ===== -->
+<section class="contact section__container" id="contact">
+  <form class="contact__form" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="e728a6f4-e33f-41aa-96bf-18a892ad124d" />
 
-    <!-- ===== Start of Footer Section ===== -->
+    <!-- Optional: Email subject -->
+    <input type="hidden" name="subject" value="New Contact Message from Website" />
+
+    <div class="input__group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    </div>
+
+    <div class="input__group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    </div>
+
+    <div class="input__group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." rows="6" required></textarea>
+    </div>
+
+    <!-- Success Message -->
+    <div id="result-contact"></div>
+
+    <div class="input__group full-width">
+      <button type="submit" class="btn">Send Message</button>
+    </div>
+  </form>
+</section>
+<!-- ===== End of Contact Us Section ===== -->
+
+ 
+     <!-- ===== Start of Footer Section ===== -->
     <footer class="footer">
       <div class="section__container footer__container">
         <div class="footer__col">
@@ -203,9 +152,42 @@
     </footer>
     <!-- ===== End of Footer Section ===== -->
 
-    <!-- Scripts -->
+<!-- Scripts -->
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="main.js"></script>
+
+<script>
+  const contactForm = document.querySelector(".contact__form");
+  const result = document.getElementById("result-contact");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent default redirect
+
+    const formData = new FormData(contactForm);
+
+    fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        result.innerHTML = "✅ Thank you! Your message has been sent.";
+        result.style.color = "green";
+        contactForm.reset();
+      } else {
+        result.innerHTML = "❌ Message failed. Please try again.";
+        result.style.color = "red";
+      }
+    })
+    .catch(() => {
+      result.innerHTML = "❌ Error sending message.";
+      result.style.color = "red";
+    });
+  });
+</script>
+
 </body>
 </html>
-
