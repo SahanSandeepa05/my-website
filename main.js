@@ -30,7 +30,7 @@ ScrollReveal().reveal(".news__card", { ...scrollRevealOption, interval: 500 });
 
 // ✅ Set Cookie
 function setCookie(name, value, days) {
-  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  const expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
   document.cookie = `${name}=${value}; expires=${expires}; path=/`;
 }
 
@@ -50,12 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   acceptBtn.addEventListener("click", function () {
-    setCookie("cookieConsent", "accepted", 180);
+    setCookie("cookieConsent", "accepted", 1);
     banner.style.display = "none";
   });
 
   rejectBtn.addEventListener("click", function () {
-    setCookie("cookieConsent", "rejected", 180);
+    setCookie("cookieConsent", "rejected", 1);
     banner.style.display = "none";
   });
 });
