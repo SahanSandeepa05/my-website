@@ -29,7 +29,7 @@ ScrollReveal().reveal(".feature__card", { ...scrollRevealOption, interval: 500 }
 ScrollReveal().reveal(".news__card", { ...scrollRevealOption, interval: 500 });
 
 // ✅ Set Cookie
-function setCookie(name, value, days) {
+function setCookie(name, value, hours) {
   const expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
   document.cookie = `${name}=${value}; expires=${expires}; path=/`;
 }
