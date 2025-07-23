@@ -565,21 +565,23 @@ nav {
 }
 /* --- footer style end --- */
 
-/* ✅ Cookie Banner Styling */
+/* Cookie Banner Styles */
 .cookie-banner {
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
-  background: #0f1a2c;
-  color: white;
-  padding: 35px 40px;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  padding: 16px 24px;
   display: none;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   z-index: 9999;
-  font-size: 14px;
-  flex-wrap: wrap;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
 }
 
 .cookie-banner a {
@@ -601,6 +603,11 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.cookie-banner button:hover {
+  opacity: 0.85;
 }
 
 @media (width > 480px) {

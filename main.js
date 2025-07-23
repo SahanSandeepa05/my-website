@@ -36,7 +36,10 @@ function setCookie(name, value, hours) {
 
 // Get Cookie
 function getCookie(name) {
-  return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
+  return document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(name + "="))
+    ?.split("=")[1];
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -45,17 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const rejectBtn = document.getElementById("reject-cookies");
 
   const cookieConsent = getCookie("cookieConsent");
-  if (!cookieConsent) {
+
+  // Only show banner if elements exist
+  if (!cookieConsent && banner) {
     banner.style.display = "flex";
   }
 
-  acceptBtn.addEventListener("click", function () {
-    setCookie("cookieConsent", "accepted", 1); // 1 hour
-    banner.style.display = "none";
-  });
+  if (acceptBtn && banner) {
+    acceptBtn.addEventListener("click", function () {
+      setCookie("cookieConsent", "accepted", 1);
+      banner.style.display = "none";
+    });
+  }
 
-  rejectBtn.addEventListener("click", function () {
-    setCookie("cookieConsent", "rejected", 1); // 1 hour
-    banner.style.display = "none";
-  });
+  if (rejectBtn && banner) {
+    rejectBtn.addEventListener("click", function () {
+      setCookie("cookieConsent", "rejected", 1);
+      banner.style.display = "none";
+    });
+  }
 });
